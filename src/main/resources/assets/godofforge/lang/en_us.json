@@ -1,4 +1,25 @@
 {
   "itemGroup.godofforge.main": "God of Forge",
-  "item.godofforge.test_ingot": "Test Ingot"
+  "item.godofforge.test_ingot": "Test Ingot",
+  "block.godofforge.mold_table": "Mold Table",
+  "container.godofforge.mold_table": "Mold Table",
+  "item.godofforge.wooden_mold": "Wooden Mold",
+  "item.godofforge.wooden_mold.with_pattern": "Wooden Mold (%s)",
+  "mold_pattern.godofforge.pickaxe_head": "Pickaxe Head",
+  "mold_pattern.godofforge.axe_head": "Axe Head",
+  "mold_pattern.godofforge.shovel_head": "Shovel Head",
+  "mold_pattern.godofforge.knife_blade": "Knife Blade",
+  "gui.godofforge.mold_table.confirm": "Confirm",
+  "gui.godofforge.mold_table.reset": "Reset",
+  "message.godofforge.mold_table.no_material": "Place planks in the material slot first.",
+  "message.godofforge.mold_table.output_full": "Take the finished mold out first.",
+  "message.godofforge.mold_table.nothing_carved": "Carve a shape first.",
+  "message.godofforge.mold_table.failed": "The carving matches no mold. The wood was lost.",
+  "message.godofforge.mold_table.success": "Mold carved: %s",
+  "message.godofforge.mold_table.learned": "New mold learned: %s!",
+  "gui.godofforge.mold_table.known": "Known molds",
+  "gui.godofforge.mold_table.none_known": "None yet",
+  "gui.godofforge.mold_table.mode_research": "Research",
+  "gui.godofforge.mold_table.mode_normal": "Known",
+  "message.godofforge.mold_table.wrong_material": "This mold needs a different material."
 }

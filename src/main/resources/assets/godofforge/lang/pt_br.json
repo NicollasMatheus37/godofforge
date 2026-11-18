@@ -1,4 +1,25 @@
 {
   "itemGroup.godofforge.main": "God of Forge",
-  "item.godofforge.test_ingot": "Lingote de Teste"
+  "item.godofforge.test_ingot": "Lingote de Teste",
+  "block.godofforge.mold_table": "Mesa de Moldes",
+  "container.godofforge.mold_table": "Mesa de Moldes",
+  "item.godofforge.wooden_mold": "Molde de Madeira",
+  "item.godofforge.wooden_mold.with_pattern": "Molde de Madeira (%s)",
+  "mold_pattern.godofforge.pickaxe_head": "Cabeça de Picareta",
+  "mold_pattern.godofforge.axe_head": "Cabeça de Machado",
+  "mold_pattern.godofforge.shovel_head": "Cabeça de Pá",
+  "mold_pattern.godofforge.knife_blade": "Lâmina de Faca",
+  "gui.godofforge.mold_table.confirm": "Confirmar",
+  "gui.godofforge.mold_table.reset": "Recomeçar",
+  "message.godofforge.mold_table.no_material": "Coloque tábuas no espaço de material primeiro.",
+  "message.godofforge.mold_table.output_full": "Retire o molde pronto primeiro.",
+  "message.godofforge.mold_table.nothing_carved": "Entalhe um formato primeiro.",
+  "message.godofforge.mold_table.failed": "O entalhe não forma nenhum molde. A madeira foi perdida.",
+  "message.godofforge.mold_table.success": "Molde entalhado: %s",
+  "message.godofforge.mold_table.learned": "Novo molde aprendido: %s!",
+  "gui.godofforge.mold_table.known": "Moldes conhecidos",
+  "gui.godofforge.mold_table.none_known": "Nenhum ainda",
+  "gui.godofforge.mold_table.mode_research": "Pesquisa",
+  "gui.godofforge.mold_table.mode_normal": "Conhecido",
+  "message.godofforge.mold_table.wrong_material": "Este molde precisa de outro material."
 }

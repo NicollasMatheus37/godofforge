@@ -2,14 +2,23 @@ package com.eris_mods.godofforge;
 
 import org.slf4j.Logger;
 
+import com.eris_mods.godofforge.command.ModCommands;
+import com.eris_mods.godofforge.network.ModNetwork;
+import com.eris_mods.godofforge.registry.ModAttachments;
+import com.eris_mods.godofforge.registry.ModBlocks;
 import com.eris_mods.godofforge.registry.ModCreativeTabs;
+import com.eris_mods.godofforge.registry.ModDataComponents;
 import com.eris_mods.godofforge.registry.ModItems;
+import com.eris_mods.godofforge.registry.ModMenus;
+import com.eris_mods.godofforge.registry.ModRegistries;
 import com.mojang.logging.LogUtils;
 
+import net.minecraft.resources.Identifier;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.neoforged.neoforge.common.NeoForge;
 
 /**
  * Entry point of God of Forge.
@@ -27,13 +36,26 @@ public class GodOfForge {
      * Every DeferredRegister must be attached to the mod event bus here.
      */
     public GodOfForge(IEventBus modEventBus, ModContainer modContainer) {
+        ModBlocks.register(modEventBus);
         ModItems.register(modEventBus);
+        ModDataComponents.register(modEventBus);
+        ModMenus.register(modEventBus);
         ModCreativeTabs.register(modEventBus);
+        ModAttachments.register(modEventBus);
+        ModRegistries.register(modEventBus);
+        ModNetwork.register(modEventBus);
+
+        NeoForge.EVENT_BUS.addListener(ModCommands::register);
 
         modEventBus.addListener(this::commonSetup);
     }
 
     private void commonSetup(FMLCommonSetupEvent event) {
         LOGGER.info("God of Forge: the forge is lit.");
+    }
+
+    /** Builds an identifier in the mod's namespace, e.g. {@code id("mold_pattern")} -> {@code godofforge:mold_pattern}. */
+    public static Identifier id(String path) {
+        return Identifier.fromNamespaceAndPath(MOD_ID, path);
     }
 }

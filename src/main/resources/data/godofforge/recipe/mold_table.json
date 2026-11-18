@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "FF",
+    "PP",
+    "PP"
+  ],
+  "key": {
+    "F": "minecraft:flint",
+    "P": "#minecraft:planks"
+  },
+  "result": {
+    "id": "godofforge:mold_table",
+    "count": 1
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "material": "wood",
+  "tier": "apprentice",
+  "part": "godofforge:knife_blade",
+  "shape": [
+    "###  ",
+    "##  #",
+    "#  ##",
+    "# ###",
+    "#####"
+  ]
+}

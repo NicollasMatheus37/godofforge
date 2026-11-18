@@ -18,8 +18,9 @@ public final class ModCreativeTabs {
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> MAIN = TABS.register("main", () -> CreativeModeTab.builder()
             .title(Component.translatable("itemGroup.godofforge.main"))
             .withTabsBefore(CreativeModeTabs.COMBAT)
-            .icon(() -> ModItems.TEST_INGOT.get().getDefaultInstance())
+            .icon(() -> ModItems.MOLD_TABLE.get().getDefaultInstance())
             .displayItems((parameters, output) -> {
+                output.accept(ModItems.MOLD_TABLE.get());
                 output.accept(ModItems.TEST_INGOT.get());
             })
             .build());
