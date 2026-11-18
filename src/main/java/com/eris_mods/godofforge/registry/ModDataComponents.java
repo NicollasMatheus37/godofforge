@@ -20,6 +20,12 @@ public final class ModDataComponents {
                     .persistent(Identifier.CODEC)
                     .networkSynchronized(Identifier.STREAM_CODEC));
 
+    /** Which {@code ForgeMaterial} a part is made of, e.g. {@code godofforge:copper}. */
+    public static final DeferredHolder<DataComponentType<?>, DataComponentType<Identifier>> MATERIAL =
+            COMPONENTS.registerComponentType("material", builder -> builder
+                    .persistent(Identifier.CODEC)
+                    .networkSynchronized(Identifier.STREAM_CODEC));
+
     private ModDataComponents() {
     }
 

@@ -1,6 +1,8 @@
 package com.eris_mods.godofforge.registry;
 
 import com.eris_mods.godofforge.GodOfForge;
+import com.eris_mods.godofforge.material.ForgeMaterial;
+import com.eris_mods.godofforge.part.PartItem;
 
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
@@ -21,6 +23,11 @@ public final class ModCreativeTabs {
             .icon(() -> ModItems.MOLD_TABLE.get().getDefaultInstance())
             .displayItems((parameters, output) -> {
                 output.accept(ModItems.MOLD_TABLE.get());
+                // every part in every head material (materials come from data packs)
+                parameters.holders().lookupOrThrow(ForgeMaterial.REGISTRY_KEY).listElements()
+                        .filter(material -> material.value().head().isPresent())
+                        .forEach(material -> ModItems.PARTS.forEach(part ->
+                                output.accept(PartItem.withMaterial(part.get(), material.key().identifier()))));
                 output.accept(ModItems.TEST_INGOT.get());
             })
             .build());

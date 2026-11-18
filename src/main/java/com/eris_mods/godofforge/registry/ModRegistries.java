@@ -1,6 +1,7 @@
 package com.eris_mods.godofforge.registry;
 
 import com.eris_mods.godofforge.casting.MoldPattern;
+import com.eris_mods.godofforge.material.ForgeMaterial;
 
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.NewDatapackRegistryEvent;
@@ -23,5 +24,6 @@ public final class ModRegistries {
         // Synced to clients (second codec) so the Mold Table can list and preview known patterns
         // and the guide book can draw them. All crafting decisions are still validated on the server.
         event.worldRegistry(MoldPattern.REGISTRY_KEY, MoldPattern.CODEC, MoldPattern.CODEC);
+        event.worldRegistry(ForgeMaterial.REGISTRY_KEY, ForgeMaterial.CODEC, ForgeMaterial.CODEC);
     }
 }

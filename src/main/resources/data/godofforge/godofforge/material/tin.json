@@ -1,0 +1,10 @@
+{
+  "head": {
+    "durability": 120,
+    "mining_speed": 4.5,
+    "attack_damage": 0.5,
+    "harvest_level": "stone",
+    "melting_point": 232,
+    "mold": "wood"
+  }
+}

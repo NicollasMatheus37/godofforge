@@ -1,0 +1,7 @@
+{
+  "handle": {
+    "item": "minecraft:bone",
+    "durability_multiplier": 0.9,
+    "speed_multiplier": 1.1
+  }
+}

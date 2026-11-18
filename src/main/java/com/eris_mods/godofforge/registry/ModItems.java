@@ -1,7 +1,10 @@
 package com.eris_mods.godofforge.registry;
 
+import java.util.List;
+
 import com.eris_mods.godofforge.GodOfForge;
 import com.eris_mods.godofforge.item.MoldItem;
+import com.eris_mods.godofforge.part.PartItem;
 
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -21,6 +24,14 @@ public final class ModItems {
     /** A wooden mold. Which shape it has is stored in the {@link ModDataComponents#MOLD_PATTERN} component. */
     public static final DeferredItem<MoldItem> WOODEN_MOLD = ITEMS.registerItem("wooden_mold", MoldItem::new,
             properties -> properties.stacksTo(1));
+
+    // ---- tool parts (material stored in the godofforge:material component) ----
+    public static final DeferredItem<PartItem> PICKAXE_HEAD = ITEMS.registerItem("pickaxe_head", PartItem::new);
+    public static final DeferredItem<PartItem> AXE_HEAD = ITEMS.registerItem("axe_head", PartItem::new);
+    public static final DeferredItem<PartItem> SHOVEL_HEAD = ITEMS.registerItem("shovel_head", PartItem::new);
+    public static final DeferredItem<PartItem> KNIFE_BLADE = ITEMS.registerItem("knife_blade", PartItem::new);
+
+    public static final List<DeferredItem<PartItem>> PARTS = List.of(PICKAXE_HEAD, AXE_HEAD, SHOVEL_HEAD, KNIFE_BLADE);
 
     private ModItems() {
     }
