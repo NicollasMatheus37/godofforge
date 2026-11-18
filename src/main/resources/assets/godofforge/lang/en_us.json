@@ -41,5 +41,12 @@
   "tooltip.godofforge.part.mining_speed": "Mining speed: %s",
   "tooltip.godofforge.part.attack_damage": "Attack damage: +%s",
   "tooltip.godofforge.part.harvest_level": "Mines: %s level",
-  "tooltip.godofforge.part.unknown_material": "Unknown material: %s"
+  "tooltip.godofforge.part.unknown_material": "Unknown material: %s",
+  "block.godofforge.crucible": "Crucible",
+  "container.godofforge.crucible": "Crucible",
+  "gui.godofforge.crucible.dump": "Empty",
+  "gui.godofforge.crucible.empty": "Empty",
+  "gui.godofforge.crucible.heating": "Heat: up to %s°C",
+  "gui.godofforge.crucible.no_heat": "No heat source",
+  "message.godofforge.crucible.dumped": "The molten metal was poured out and lost."
 }

@@ -2,6 +2,7 @@
   "material": "wood",
   "tier": "apprentice",
   "part": "godofforge:shovel_head",
+  "cost": 1,
   "shape": [
     "#####",
     "#   #",

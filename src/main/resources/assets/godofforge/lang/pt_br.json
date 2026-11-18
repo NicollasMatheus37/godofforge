@@ -41,5 +41,12 @@
   "tooltip.godofforge.part.mining_speed": "Velocidade de mineração: %s",
   "tooltip.godofforge.part.attack_damage": "Dano de ataque: +%s",
   "tooltip.godofforge.part.harvest_level": "Minera: nível %s",
-  "tooltip.godofforge.part.unknown_material": "Material desconhecido: %s"
+  "tooltip.godofforge.part.unknown_material": "Material desconhecido: %s",
+  "block.godofforge.crucible": "Cadinho",
+  "container.godofforge.crucible": "Cadinho",
+  "gui.godofforge.crucible.dump": "Esvaziar",
+  "gui.godofforge.crucible.empty": "Vazio",
+  "gui.godofforge.crucible.heating": "Calor: até %s°C",
+  "gui.godofforge.crucible.no_heat": "Sem fonte de calor",
+  "message.godofforge.crucible.dumped": "O metal derretido foi despejado e perdido."
 }

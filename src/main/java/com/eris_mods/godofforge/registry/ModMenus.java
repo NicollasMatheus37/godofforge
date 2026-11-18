@@ -1,6 +1,7 @@
 package com.eris_mods.godofforge.registry;
 
 import com.eris_mods.godofforge.GodOfForge;
+import com.eris_mods.godofforge.menu.CrucibleMenu;
 import com.eris_mods.godofforge.menu.MoldTableMenu;
 
 import net.minecraft.core.registries.Registries;
@@ -16,6 +17,9 @@ public final class ModMenus {
 
     public static final DeferredHolder<MenuType<?>, MenuType<MoldTableMenu>> MOLD_TABLE =
             MENUS.register("mold_table", () -> IMenuTypeExtension.create(MoldTableMenu::new));
+
+    public static final DeferredHolder<MenuType<?>, MenuType<CrucibleMenu>> CRUCIBLE =
+            MENUS.register("crucible", () -> IMenuTypeExtension.create(CrucibleMenu::new));
 
     private ModMenus() {
     }

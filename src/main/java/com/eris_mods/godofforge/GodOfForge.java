@@ -5,6 +5,7 @@ import org.slf4j.Logger;
 import com.eris_mods.godofforge.command.ModCommands;
 import com.eris_mods.godofforge.network.ModNetwork;
 import com.eris_mods.godofforge.registry.ModAttachments;
+import com.eris_mods.godofforge.registry.ModBlockEntities;
 import com.eris_mods.godofforge.registry.ModBlocks;
 import com.eris_mods.godofforge.registry.ModCreativeTabs;
 import com.eris_mods.godofforge.registry.ModDataComponents;
@@ -37,6 +38,7 @@ public class GodOfForge {
      */
     public GodOfForge(IEventBus modEventBus, ModContainer modContainer) {
         ModBlocks.register(modEventBus);
+        ModBlockEntities.register(modEventBus);
         ModItems.register(modEventBus);
         ModDataComponents.register(modEventBus);
         ModMenus.register(modEventBus);

@@ -1,0 +1,10 @@
+{
+  "parent": "minecraft:block/cauldron",
+  "textures": {
+    "particle": "godofforge:block/crucible_side",
+    "top": "godofforge:block/crucible_top",
+    "bottom": "godofforge:block/crucible_bottom",
+    "side": "godofforge:block/crucible_side",
+    "inside": "godofforge:block/crucible_inside"
+  }
+}

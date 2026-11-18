@@ -2,6 +2,7 @@
   "material": "wood",
   "tier": "apprentice",
   "part": "godofforge:axe_head",
+  "cost": 3,
   "shape": [
     "#  ##",
     "#   #",

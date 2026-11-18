@@ -35,10 +35,10 @@ import net.minecraft.world.item.ItemStack;
  * The grid lives on the server and is mirrored to the client through two {@link DataSlot}s,
  * so a modified client cannot fake a carving.
  */
-public class MoldTableMenu extends AbstractContainerMenu {
+public class MoldTableMenu extends AbstractContainerMenu implements ActionMenu {
     public static final int GRID_CELLS = MoldPattern.SIZE * MoldPattern.SIZE;
 
-    /** Button/action ids sent by the client (see {@code MoldTableActionPayload}). 0..24 = carve that cell. */
+    /** Button/action ids sent by the client (see {@code MenuActionPayload}). 0..24 = carve that cell. */
     public static final int ACTION_CONFIRM = 100;
     public static final int ACTION_RESET = 101;
 
@@ -142,6 +142,7 @@ public class MoldTableMenu extends AbstractContainerMenu {
     // ---------------------------------------------------------------- actions (server)
 
     /** Called on the server when the client presses a grid cell or a button. */
+    @Override
     public void handleAction(ServerPlayer player, int action) {
         if (action >= 0 && action < GRID_CELLS) {
             if (!hasMaterial()) {

@@ -23,6 +23,7 @@ public final class ModCreativeTabs {
             .icon(() -> ModItems.MOLD_TABLE.get().getDefaultInstance())
             .displayItems((parameters, output) -> {
                 output.accept(ModItems.MOLD_TABLE.get());
+                output.accept(ModItems.CRUCIBLE.get());
                 // every part in every head material (materials come from data packs)
                 parameters.holders().lookupOrThrow(ForgeMaterial.REGISTRY_KEY).listElements()
                         .filter(material -> material.value().head().isPresent())

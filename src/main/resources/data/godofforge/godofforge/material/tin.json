@@ -5,6 +5,7 @@
     "attack_damage": 0.5,
     "harvest_level": "stone",
     "melting_point": 232,
-    "mold": "wood"
+    "mold": "wood",
+    "color": "#C9CDD6"
   }
 }

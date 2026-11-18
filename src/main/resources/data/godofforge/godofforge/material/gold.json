@@ -5,6 +5,21 @@
     "attack_damage": 0.0,
     "harvest_level": "wood",
     "melting_point": 1064,
-    "mold": "wood"
+    "mold": "wood",
+    "color": "#F5CF3A",
+    "melt_items": [
+      {
+        "item": "minecraft:gold_ingot",
+        "amount": 9
+      },
+      {
+        "item": "minecraft:raw_gold",
+        "amount": 9
+      },
+      {
+        "item": "minecraft:gold_nugget",
+        "amount": 1
+      }
+    ]
   }
 }

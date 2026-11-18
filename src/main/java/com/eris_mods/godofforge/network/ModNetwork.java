@@ -5,7 +5,7 @@ import net.neoforged.neoforge.network.event.RegisterPayloadHandlersEvent;
 
 /** Registers the mod's custom network packets. Bump the version when packet formats change. */
 public final class ModNetwork {
-    private static final String PROTOCOL_VERSION = "2";
+    private static final String PROTOCOL_VERSION = "3";
 
     private ModNetwork() {
     }
@@ -16,7 +16,7 @@ public final class ModNetwork {
 
     private static void onRegisterPayloads(RegisterPayloadHandlersEvent event) {
         event.registrar(PROTOCOL_VERSION)
-                .playToServer(MoldTableActionPayload.TYPE, MoldTableActionPayload.STREAM_CODEC, MoldTableActionPayload::handle)
+                .playToServer(MenuActionPayload.TYPE, MenuActionPayload.STREAM_CODEC, MenuActionPayload::handle)
                 .playToServer(MoldTableCarvePayload.TYPE, MoldTableCarvePayload.STREAM_CODEC, MoldTableCarvePayload::handle);
     }
 }

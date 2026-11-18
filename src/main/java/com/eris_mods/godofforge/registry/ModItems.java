@@ -20,6 +20,7 @@ public final class ModItems {
     public static final DeferredItem<Item> TEST_INGOT = ITEMS.registerSimpleItem("test_ingot");
 
     public static final DeferredItem<BlockItem> MOLD_TABLE = ITEMS.registerSimpleBlockItem("mold_table", ModBlocks.MOLD_TABLE);
+    public static final DeferredItem<BlockItem> CRUCIBLE = ITEMS.registerSimpleBlockItem("crucible", ModBlocks.CRUCIBLE);
 
     /** A wooden mold. Which shape it has is stored in the {@link ModDataComponents#MOLD_PATTERN} component. */
     public static final DeferredItem<MoldItem> WOODEN_MOLD = ITEMS.registerItem("wooden_mold", MoldItem::new,

@@ -21,10 +21,11 @@ import net.minecraft.resources.ResourceKey;
  *
  * @param material what the mold is made of
  * @param tier     minimum mastery tier for this pattern
- * @param part     id of the part this mold casts (the part items are added in step 1.6)
+ * @param part     id of the part item this mold casts, e.g. {@code godofforge:pickaxe_head}
+ * @param cost     metal needed to cast one part, in ingots
  * @param shape    {@value #SIZE} rows of {@value #SIZE} characters
  */
-public record MoldPattern(MoldMaterial material, MasteryTier tier, Identifier part, List<String> shape) {
+public record MoldPattern(MoldMaterial material, MasteryTier tier, Identifier part, int cost, List<String> shape) {
     public static final int SIZE = 5;
     public static final char SOLID = '#';
     public static final char CARVED = ' ';
@@ -36,6 +37,7 @@ public record MoldPattern(MoldMaterial material, MasteryTier tier, Identifier pa
             MoldMaterial.CODEC.fieldOf("material").forGetter(MoldPattern::material),
             MasteryTier.CODEC.optionalFieldOf("tier", MasteryTier.APPRENTICE).forGetter(MoldPattern::tier),
             Identifier.CODEC.fieldOf("part").forGetter(MoldPattern::part),
+            Codec.intRange(1, 64).optionalFieldOf("cost", 1).forGetter(MoldPattern::cost),
             Codec.STRING.listOf().fieldOf("shape").forGetter(MoldPattern::shape)
     ).apply(instance, MoldPattern::new)).validate(MoldPattern::validate);
 

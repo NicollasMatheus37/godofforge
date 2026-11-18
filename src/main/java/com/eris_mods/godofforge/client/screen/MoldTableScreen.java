@@ -6,7 +6,7 @@ import com.eris_mods.godofforge.casting.MoldPattern;
 import com.eris_mods.godofforge.item.MoldItem;
 import com.eris_mods.godofforge.knowledge.KnowledgeHelper;
 import com.eris_mods.godofforge.menu.MoldTableMenu;
-import com.eris_mods.godofforge.network.MoldTableActionPayload;
+import com.eris_mods.godofforge.network.MenuActionPayload;
 import com.eris_mods.godofforge.network.MoldTableCarvePayload;
 
 import net.minecraft.client.gui.GuiGraphicsExtractor;
@@ -102,7 +102,7 @@ public class MoldTableScreen extends AbstractContainerScreen<MoldTableMenu> {
     // ---------------------------------------------------------------- actions
 
     private void sendAction(int action) {
-        ClientPacketDistributor.sendToServer(new MoldTableActionPayload(menu.containerId, action));
+        ClientPacketDistributor.sendToServer(new MenuActionPayload(menu.containerId, action));
     }
 
     private void select(int index) {

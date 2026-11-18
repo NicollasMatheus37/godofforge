@@ -1,5 +1,6 @@
 package com.eris_mods.godofforge;
 
+import com.eris_mods.godofforge.client.screen.CrucibleScreen;
 import com.eris_mods.godofforge.client.screen.MoldTableScreen;
 import com.eris_mods.godofforge.registry.ModMenus;
 
@@ -25,5 +26,6 @@ public class GodOfForgeClient {
     @SubscribeEvent
     static void onRegisterMenuScreens(RegisterMenuScreensEvent event) {
         event.register(ModMenus.MOLD_TABLE.get(), MoldTableScreen::new);
+        event.register(ModMenus.CRUCIBLE.get(), CrucibleScreen::new);
     }
 }
